@@ -67,9 +67,8 @@ The main objective of PhishGuard is to spread cybersecurity awareness and help u
 **Technologies:** HTML, CSS, JavaScript
 
 ## 🔗 GitHub Repository
-[View PhishGuard on GitHub](https://github.com/mishrapragya541-eng/project)
+https://github.com/mishrapragya541-eng/project
 
----
 **Remember:** Pause. Verify. Protect.
 
 
