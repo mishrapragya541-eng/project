@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#020907">
+    <title>PhishGuard - Phishing URL Detector</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <a class="brand" href="#home"><span aria-hidden="true">⬡</span> PhishGuard</a>
+        <nav aria-label="Main navigation">
+            <a href="#home">Home</a>
+            <a href="#awareness">Awareness</a>
+            <a href="#checker">URL Checker</a>
+            <a href="#tips">Safety Tips</a>
+            <a href="#quiz">Quiz</a>
+        </nav>
+    </header>
+
+    <section id="home" class="page hero is-active">
+        <div class="home-copy">
+            <span class="detector-icon" aria-hidden="true">🛡️</span>
+            <p class="eyebrow">PHISHGUARD SECURITY TOOL</p>
+            <h1>Pause. Verify. Protect.</h1>
+            <a class="btn" href="#checker">Scan a URL</a>
+        </div>
+    </section>
+
+    <section id="checker" class="page checker-section" hidden>
+        <div class="detector-panel">
+            <span class="detector-icon" aria-hidden="true">🛡️</span>
+            <p class="eyebrow">URL SAFETY CHECK</p>
+            <h2>Phishing URL Detector</h2>
+            <p class="detector-subtitle">Analyze URL security risk</p>
+
+            <form id="urlForm">
+                <input
+                    type="text"
+                    id="urlInput"
+                    placeholder="Enter URL here..."
+                    aria-label="Website URL"
+                    required
+                >
+                <button type="submit">Scan URL</button>
+            </form>
+            <button type="button" id="sampleUrl" class="sample-link">Try a sample URL</button>
+            <div id="result" aria-live="polite"></div>
+            <p class="notice">Local check · No link is opened</p>
+        </div>
+    </section>
+
+    <section id="awareness" class="page" hidden>
+        <h2>Common red flags</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Email scams</h3>
+                <p>Unexpected links or payment requests.</p>
+            </div>
+
+            <div class="card">
+                <h3>Text scams</h3>
+                <p>Urgent messages from unknown numbers.</p>
+            </div>
+
+            <div class="card">
+                <h3>Fake sign-in pages</h3>
+                <p>Lookalike sites asking for credentials.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="tips" class="page" hidden>
+        <h2>Safety Tips</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Check the domain</h3>
+                <p>Watch for misspellings.</p>
+            </div>
+
+            <div class="card">
+                <h3>Keep codes private</h3>
+                <p>Never share passwords or OTPs.</p>
+            </div>
+
+            <div class="card">
+                <h3>Pause before acting</h3>
+                <p>Urgency is a common pressure tactic.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="quiz" class="page" hidden>
+        <h2>Quick check</h2>
+        <div class="quiz-status">
+            <span id="quizProgressText">Question 1 of 3</span>
+            <span id="quizScore">Score: 0</span>
+            <progress id="quizProgress" value="1" max="3" aria-label="Quiz progress"></progress>
+        </div>
+        <p id="question">A message asks for your OTP urgently.
+        What should you do?</p>
+
+        <div class="quiz-options">
+            <button class="option" data-answer="wrong">
+                Share the OTP
+            </button>
+
+            <button class="option" data-answer="correct">
+                Never share it
+            </button>
+
+            <button class="option" data-answer="wrong">
+                Forward it to everyone
+            </button>
+        </div>
+
+        <p id="quizResult" aria-live="polite"></p>
+        <button id="nextQuestion" hidden>Next Question</button>
+    </section>
+
+    <footer>
+        <p>PhishGuard · Security awareness</p>
+    </footer>
+
+</body>
+</html>
